@@ -66,7 +66,10 @@
   \usepackage[whole]{bxcjkjatype}
 \else % Use this for XeLaTeX, especially for Japanese-heavy documents
   \usepackage{xeCJK}
-  \setCJKmainfont{Noto Serif CJK JP}
+\setCJKmainfont[
+    SmallCapsFont = Noto Sans CJK JP,  % Japanese in \section (SmallCaps) -> Gothic
+    ItalicFont = Noto Sans CJK JP      % Japanese in \subsection (Italic) -> Gothic
+]{Noto Serif CJK JP}
   \setCJKsansfont{Noto Sans CJK JP}
   \setCJKmonofont{Noto Sans Mono CJK JP}% Default fonts, can be customized
   % 1. Define Simplified Chinese (SC)

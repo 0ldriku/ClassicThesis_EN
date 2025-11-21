@@ -155,7 +155,13 @@ Build your bibliography entries following the standard BibTeX format. Below are 
 }
 \end{lstlisting}
 
-The \texttt{yomi} field should contain the romanized reading of Japanese names in hiragana. When provided, references will be sorted according to the Japanese 50-on table order. This ensures proper bibliographic ordering for Japanese-language sources.
+The format of the \texttt{yomi} field determines the sorting order of the bibliography:
 
-\textbf{Note:} Chinese references can also use \texttt{langid=japanese}, though they will be rendered in Japanese fonts in the bibliography. This is generally acceptable for mixed CJK bibliographies. 
+\begin{description}
+    \item[Hiragana:] Japanese references are listed separately after English references and sorted according to the 50-on table.
+    \item[Romaji:] Japanese references are mixed with English references and sorted alphabetically.
+\end{description}
+
+
+\textit{Note:} Chinese references can also use \texttt{langid=japanese}, though they will be rendered in Japanese fonts in the bibliography. This is acceptable IMHO.
 

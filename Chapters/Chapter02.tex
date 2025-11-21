@@ -4,6 +4,75 @@ This chapter serves as a guide and template for using this thesis style. It demo
 
 \section{Text and Structure}
 
+\subsection{見出し}
+
+\begin{lstlisting}
+%*************************************
+\part{部}
+\chapter{章} 
+\section{節}
+\subsection{項}
+\subsubsection{目}
+\paragraph{段落} %段落に見出しをつける場合
+\subparagraph{小段落} 
+%*************************************
+\section*{}、*をつけることで、番号をつけないようにできます。
+
+
+
+\end{lstlisting}
+
+\subsection{Font Size}
+LaTeX provides a hierarchy of font size commands to accommodate various typographical needs within a document. The ten standard font size commands, detailed in \autoref{tab:fontsizes}, range from \texttt{\textbackslash tiny} for footnotes and subscripts to \texttt{\textbackslash Huge} for major headings and titles. These commands are relative to the document's base font size (specified in the document class options) and ensure consistent scaling throughout the document.
+
+
+
+
+
+\begin{table}[ht]
+\centering
+
+\caption{LaTeX Font Size Commands Reference}
+\renewcommand{\arraystretch}{1.8}
+% Modern column definition with better spacing
+\begin{tabular}{@{\extracolsep{8pt}}l l@{}}
+\toprule
+\rowcolor{headerblue}
+\color{white}\textbf{Command} & 
+\color{white}\textbf{Example Output} \\
+\midrule
+\rowcolor{lightgray}
+\texttt{\textbackslash tiny} & {\tiny This is tiny text} \\
+\texttt{\textbackslash scriptsize} & {\scriptsize This is scriptsize text} \\
+\rowcolor{lightgray}
+\texttt{\textbackslash footnotesize} & {\footnotesize This is footnotesize text} \\
+\texttt{\textbackslash small} & {\small This is small text} \\
+\rowcolor{lightgray}
+\texttt{\textbackslash normalsize} & {\normalsize This is normalsize text} \\
+\texttt{\textbackslash large} & {\large This is large text} \\
+\rowcolor{lightgray}
+\texttt{\textbackslash Large} & {\Large This is Large text} \\
+\texttt{\textbackslash LARGE} & {\LARGE This is LARGE text} \\
+\rowcolor{lightgray}
+\texttt{\textbackslash huge} & {\huge This is huge text} \\
+\texttt{\textbackslash Huge} & {\Huge This is Huge text} \\
+\bottomrule
+\label{tab:fontsizes}
+\end{tabular}
+
+\end{table}
+
+
+Here is a single paragraph that demonstrates the relative scales of standard LaTeX font commands. We start with {\tiny tiny text for fine details}, move up to {\scriptsize script size usually for subscripts}, and then {\footnotesize footnote size}. 
+
+Gradually, we reach {\small small text}, before returning to {\normalsize the default normal size}. To emphasize points, we can use {\large large text}, {\Large larger text for sub-titles}, or {\LARGE even larger text}. Finally, for major impacts, we use {\huge huge} and {\Huge massive sizes}.
+
+
+これはLaTeXのフォントサイズ変更コマンドを確認するための段落です。まず{\tiny 極小の文字 (tiny)}から始まり、{\scriptsize 添え字などに使うサイズ (scriptsize)}、そして{\footnotesize 脚注サイズ (footnotesize)}へと変化します。
+
+ここから{\small 少し小さな文字 (small)}になり、{\normalsize 標準のサイズ (normalsize)}に戻ります。強調したい場合は{\large やや大きな文字 (large)}、{\Large 大きな文字 (Large)}、あるいは{\LARGE さらに大きな文字 (LARGE)}を使います。見出しなどで目立たせるには{\huge 巨大な文字 (huge)}や、{\Huge 最大級の文字 (Huge)}を使用します。
+
+
 \subsection{Formatting}
 
 Examples: \textit{Italics}, \textbf{bold}, \spacedallcaps{All Caps}, \textsc{Small
@@ -34,7 +103,7 @@ Here is an description list:
 \end{description}
 
 
-\section{Quote}
+\subsection{Quote}
 \begin{quote}
     Similar patterns regarding information retention have been observed in cross-platform rendering engines.
 \end{quote}
@@ -70,6 +139,48 @@ However, one must be careful not to confuse correlation with causation. As \text
 
 The mystery remains partially unsolved. While \citeauthor{sato2023}'s theory on the Mizuna-Pork ratio holds true (\citeyear{sato2023}), the emotional impact of the Power Bowl transcends academic citation.
 
+\section{Symbols}
+
+Refer to \autoref{tab:symbols} for the correct input codes, noting that the most common cause of compilation errors is the unescaped use of the ampersand (\&).
+
+
+\begin{table}[ht]
+\centering
+\caption{Common LaTeX Symbols Reference}
+\renewcommand{\arraystretch}{1.5}
+% Modern column definition with better spacing
+\begin{tabular}{@{\extracolsep{4pt}}l c l c l c@{}}
+\toprule
+\rowcolor{headerblue}
+\color{white}\textbf{Input} & \color{white}\textbf{Output} & 
+\color{white}\textbf{Input} & \color{white}\textbf{Output} & 
+\color{white}\textbf{Input} & \color{white}\textbf{Output} \\
+\midrule
+\rowcolor{lightgray}
+\texttt{\textbackslash\%} & \% & 
+\texttt{\textbackslash\$} & \$ & 
+\texttt{\textbackslash\&} & \& \\
+\texttt{\textbackslash\{} & \{ & 
+\texttt{\textbackslash\}} & \} & 
+\texttt{\textbackslash\#} & \# \\
+\midrule
+\rowcolor{lightgray}
+\texttt{\$\textbackslash alpha\$} & $\alpha$ & 
+\texttt{\$\textbackslash theta\$} & $\theta$ & 
+\texttt{\$\textbackslash pi\$} & $\pi$ \\
+
+\texttt{\$\textbackslash Gamma\$} & $\Gamma$ & 
+\texttt{\$\textbackslash Delta\$} & $\Delta$ & 
+\texttt{\$\textbackslash Phi\$} & $\Phi$ \\
+\bottomrule
+\label{tab:symbols}
+\end{tabular}
+\end{table}
+
+\section{Page Break}
+
+Commands to perform a page break include {\textbackslash}pagebreak, {\textbackslash}newpage, and {\textbackslash}clearpage. Although the specific usage differs for each command, they are basically used to initiate a new page.
+
 \newpage
 
 \section{Figures}
@@ -78,17 +189,51 @@ Figures should be placed in the \texttt{gfx/} folder.
 \begin{figure}[htbp]
     \centering
     % Using a standard example image if your specific image isn't available
-    \includegraphics[width=0.5\textwidth]{gfx/example_1.jpg} 
+    \includegraphics[width=0.26\textwidth]{gfx/example_1.jpg} 
     \caption{Example of a single figure.}
     \label{fig:example-single}
 \end{figure}
 
 
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{gfx/example_1.jpg}
+        \caption*{(a) First figure}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{gfx/example_2.jpg}
+        \caption*{(b) Second figure}
+    \end{minipage}
+    
+    \vspace{1em}
+    
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{gfx/example_3.jpg}
+        \caption*{(c) Third figure}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{gfx/example_4.jpg}
+        \caption*{(d) Fourth figure}
+    \end{minipage}
+    
+    \caption{Overall caption for all four figures}
+    \label{fig:all}
+\end{figure}
+
+
+\newpage
 
 \section{Tables}
 Use \texttt{booktabs} for professional quality tables and \texttt{tabularx} for width control.
 
-\begin{table}[htbp]
+\begin{table}[ht]
     \centering
     \footnotesize
     \caption{Example table with booktabs}
@@ -103,7 +248,40 @@ Use \texttt{booktabs} for professional quality tables and \texttt{tabularx} for 
     \end{tabularx}
 \end{table}
 
-\clearpage
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\begin{tabular}{lccr}
+\toprule
+
+\textbf{Product} & \textbf{Category} & \textbf{Stock} & \textbf{Price (\$)} \\
+\midrule
+MacBook Pro 16" & Laptop & 45 & 2,499 \\
+Dell XPS 15 & Laptop & 32 & 1,799 \\
+ThinkPad X1 Carbon & Laptop & 28 & 1,899 \\
+\midrule
+Magic Mouse 2 & Accessory & 156 & 79 \\
+Logitech MX Master 3 & Accessory & 203 & 99 \\
+Razer DeathAdder V2 & Accessory & 87 & 69 \\
+\midrule
+Mechanical Keyboard & Peripheral & 64 & 129 \\
+Wireless Keyboard & Peripheral & 91 & 59 \\
+Gaming Keyboard RGB & Peripheral & 43 & 159 \\
+\midrule
+27" 4K Monitor & Display & 38 & 549 \\
+34" Ultrawide Monitor & Display & 22 & 899 \\
+32" Gaming Monitor & Display & 29 & 699 \\
+\midrule
+USB-C Hub & Adapter & 245 & 49 \\
+Thunderbolt Dock & Adapter & 67 & 279 \\
+HDMI Cable 10ft & Cable & 412 & 15 \\
+\bottomrule
+\end{tabular}
+\caption{Electronics inventory with booktabs styling}
+\label{tab:inventory}
+\end{table}
+
 
 \begin{table*}[ht]
   \centering
@@ -144,18 +322,13 @@ Use \texttt{booktabs} for professional quality tables and \texttt{tabularx} for 
     Max sentence length                   & 54   & 100  & 43   & 95   \\
     Parse-tree height                     & 4.15 (2.03) & 7.04 (3.01) & 4.43 (1.57) & 7.34 (3.14) \\
     Mean dependency distance              & 2.62 (0.59) & 3.27 (0.88) & 2.82 (0.40) & 3.19 (0.50) \\
-    PPs per sentence                      & 5.74 (3.32) & 10.18 (6.16) & 5.23 (2.82) & 10.55 (5.36) \\
-    Classifier--noun pairs (\emph{count})    &  7   &  5   & 12   & 13   \\
-    Particle--verb frames (\emph{count})      &  3   & 25   &  4   & 27   \\
+
     %------ Lexical block ------%
     \addlinespace
     \multicolumn{5}{@{}l}{\textit{Lexical Complexity}} \\
     High-frequency tokens (\%) & 17.74 & 14.45 & 17.01 & 13.90 \\
     Mid-frequency tokens (\%)  & 22.91 & 26.38 & 19.50 & 21.07 \\
     Low-frequency tokens (\%)  &  3.92 &  5.77 &  5.94 &  7.75 \\
-    Root TTR (NP heads)        &  0.06 &  0.04 &  0.05 &  0.04 \\
-    Root TTR (VP heads)        &  0.04 &  0.03 &  0.04 &  0.03 \\
-    Root TTR (PP heads)        &  0.02 &  0.01 &  0.02 &  0.01 \\
     \midrule
     %------ Science 1 and 2 ------%
     & \multicolumn{2}{c}{\textsc{Science 1}}
@@ -172,23 +345,18 @@ Use \texttt{booktabs} for professional quality tables and \texttt{tabularx} for 
     Max sentence length                   & 45   & 94   & 87   & 99   \\
     Parse-tree height                     & 5.23 (1.34) & 8.82 (2.30) & 5.61 (1.83) & 8.76 (2.85) \\
     Mean dependency distance              & 2.90 (0.62) & 2.99 (0.76) & 2.91 (0.51) & 3.12 (0.66) \\
-    PPs per sentence                      & 5.88 (1.93) & 12.73 (4.45) & 7.13 (3.92) & 11.88 (5.63) \\
-    Classifier--noun pairs (\emph{count})    &  4   &  7   &  2   &  3   \\
-    Particle--verb frames (\emph{count})      & 13   & 33   & 10   & 38   \\
+
     %------ Lexical block ------%
     \addlinespace
     \multicolumn{5}{@{}l}{\textit{Lexical Complexity}} \\
     High-frequency tokens (\%) & 14.24 & 13.40 & 14.37 & 16.80 \\
     Mid-frequency tokens (\%)  & 26.36 & 27.05 & 27.75 & 29.30 \\
     Low-frequency tokens (\%)  &  8.94 &  8.77 &  4.46 &  4.46 \\
-    Root TTR (NP heads)        &  0.05 &  0.04 &  0.04 &  0.04 \\
-    Root TTR (VP heads)        &  0.04 &  0.02 &  0.04 &  0.03 \\
-    Root TTR (PP heads)        &  0.02 &  0.01 &  0.02 &  0.01 \\
     \bottomrule
     \end{tabular*}
     \begin{tablenotes}[flushleft]
       \footnotesize
-      \item \emph{Note.} NP: Noun Phrase; VP: Verb Phrase; PP: Prepositional Phrase; TTR: Type--Token Ratio. Values in parentheses represent standard deviations. Most metrics show means across sentences, except counts and maximum values.
+      \item \emph{Note.} Values in parentheses represent standard deviations. Most metrics show means across sentences, except counts and maximum values.
     \end{tablenotes}
   \end{threeparttable}
 \end{table*}

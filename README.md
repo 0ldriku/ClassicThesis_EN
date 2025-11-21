@@ -14,6 +14,16 @@ This template is based on [ClassicThesis v4.8](https://ctan.org/pkg/classicthesi
 - **Japanese Reference Sorting**: Proper bibliographic ordering using the 50-on table
 - **Multi-language Support**: Built-in support for Japanese, Simplified Chinese, Traditional Chinese, and Korean
 
+
+## ⚡ Quick Start (TL;DR)
+
+Get started with **Overleaf** in less than a minute:
+
+1.  **Download:** Click the green **Code** button (top of this page) and select **Download ZIP**.
+2.  **Upload:** In Overleaf, click **New Project** $\rightarrow$ **Upload Project**, then upload the ZIP file.
+3.  **Configure:** Inside the editor, click **Menu** (top left icon) and set the **Compiler** to **XeLaTeX**.
+4.  **Run:** Click **Recompile**. You are ready to write!
+
 ## Usage
 
 ### Compilation

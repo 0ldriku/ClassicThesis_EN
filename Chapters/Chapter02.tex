@@ -68,10 +68,6 @@ Here is a single paragraph that demonstrates the relative scales of standard LaT
 Gradually, we reach {\small small text}, before returning to {\normalsize the default normal size}. To emphasize points, we can use {\large large text}, {\Large larger text for sub-titles}, or {\LARGE even larger text}. Finally, for major impacts, we use {\huge huge} and {\Huge massive sizes}.
 
 
-これはLaTeXのフォントサイズ変更コマンドを確認するための段落です。まず{\tiny 極小の文字 (tiny)}から始まり、{\scriptsize 添え字などに使うサイズ (scriptsize)}、そして{\footnotesize 脚注サイズ (footnotesize)}へと変化します。
-
-ここから{\small 少し小さな文字 (small)}になり、{\normalsize 標準のサイズ (normalsize)}に戻ります。強調したい場合は{\large やや大きな文字 (large)}、{\Large 大きな文字 (Large)}、あるいは{\LARGE さらに大きな文字 (LARGE)}を使います。見出しなどで目立たせるには{\huge 巨大な文字 (huge)}や、{\Huge 最大級の文字 (Huge)}を使用します。
-
 
 \subsection{Formatting}
 
@@ -121,23 +117,23 @@ This template uses \texttt{biblatex} with APA style.
 
 
 
-The cafeteria was loud, but my focus was singular. I stared at the legendary dish before me: the Tokyo Tech Power Bowl (東工大パワー丼). While many consume it blindly, I sought to understand its structural integrity.
+The cafeteria was loud, but my focus was singular. I stared at the legendary dish before me: the Tokyo Tech Power Bowl. While many consume it blindly, I sought to understand its structural integrity.
 
-As \textcite{sato2023} famously argued in their seminal paper on cafeteria dynamics, the precise allocation of Mizuna greens to grilled pork is not merely a culinary choice, but a mathematical necessity. I picked up my chopsticks, ready to verify their findings.
+As \textcite{Miede2011} famously argued in their seminal paper on cafeteria dynamics, the precise allocation of Mizuna greens to grilled pork is not merely a culinary choice, but a mathematical necessity. I picked up my chopsticks, ready to verify their findings.
 
 To analyze the bowl properly, I needed to minimize cognitive load. I applied the principles of \citeauthor{mayer2021}, who established in \citeyear{mayer2021} that people learn better from words and pictures than from words alone. Therefore, I took a picture of the bowl before eating it.
 
 Digging deeper into the rice, I suspected a hidden network of flavors. It felt almost illicit, like the "eavesdropping" techniques described by \textcite{Miede2011} in the context of business relationships. Was the garlic sauce communicating secretly with the pork?
 
-I also considered the possibility of a secret ingredient. \textcite{suzuki2024} recently published a comprehensive guide on bananas. Could there be a banana hidden in the Power Bowl? A quick taste test confirmed: definitely not.
+I also considered the possibility of a secret ingredient. \textcite{Miede2011} recently published a comprehensive guide on bananas. Could there be a banana hidden in the Power Bowl? A quick taste test confirmed: definitely not.
 
 
 The energy density of this meal is high. According to the generative activity principle discussed by \textcite{fiorella2022}, learning—or in this case, digestion—is a generative process.
 
-However, one must be careful not to confuse correlation with causation. As \textcite{tanaka2025} warn in their study on dummy variables, what looks like a piece of pork might actually be a cleverly disguised piece of fried garlic (a culinary "dummy" variable, if you will).
+However, one must be careful not to confuse correlation with causation. As \textcite{Miede2011} warn in their study on dummy variables, what looks like a piece of pork might actually be a cleverly disguised piece of fried garlic (a culinary "dummy" variable, if you will).
 
 
-The mystery remains partially unsolved. While \citeauthor{sato2023}'s theory on the Mizuna-Pork ratio holds true (\citeyear{sato2023}), the emotional impact of the Power Bowl transcends academic citation.
+The mystery remains partially unsolved. While \citeauthor{Miede2011}'s theory on the Mizuna-Pork ratio holds true (\citeyear{Miede2011}), the emotional impact of the Power Bowl transcends academic citation.
 
 \section{Symbols}
 
@@ -379,69 +375,5 @@ For multi-line equations, use \texttt{align}:
 
 \section{Cross-Referencing}
 You can reference chapters (\autoref{ch:examples}), figures (\autoref{fig:example-single}), tables (\autoref{tab:example}), and equations (\autoref{eq:example}) automatically.
-
-For Japanese articles, you can use \texttt{autorefja} to reference  figures (\autorefja{fig:example-single}), tables (\autorefja{tab:example}), and equations (\autorefja{eq:example}) automatically.
-
-Alternatively, you can reference items manually: chapters (第\ref{ch:examples}章) or sections (\S\ref{sec:otherlanguages}).
-
-
-\section{日本語の場合}
-
-\subsection{普通の日本語}
-吾輩は\textbf{猫}である。名前はまだ無い。
-
-どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕まえて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会した事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽ぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。
-
-
-
-
-
-\subsection{日本語のフォント}
-
-\paragraph{Mainfont}
-吾輩は猫である。名前はまだ無い。
-
-\paragraph{Sansfont}
-
-
-\textsf{吾輩は猫である。名前はまだ無い。}
-
-\paragraph{Monofont}
-
-\texttt{吾輩は猫である。名前はまだ無い。}
-
-\vspace{1cm}
-
-日本語のフォントの指定は\texttt{classicthesis-config.tex}の以下の部分で変更できます。
-
-\begin{lstlisting}
-  %*************************************
-  \usepackage{xeCJK}
-  \setCJKmainfont{Noto Serif CJK JP}
-  \setCJKsansfont{Noto Sans CJK JP}
-  \setCJKmonofont{Noto Sans Mono CJK JP}
-  %*************************************
-\end{lstlisting}
-
-Overleaf で使用できる和文フォントの一覧は次の記事にあります。
-
-\url{https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Japanese}
-
-\subsection{Other Languages}\label{sec:otherlanguages}
-
-
-
-\paragraph{Simplified Chinese}
-\textzh{海客谈瀛洲，烟涛微茫信难求。 越人语天姥，云霞明灭或可睹。 天姥连天向天横，势拔五岳掩赤城。}
-
-\paragraph{Traditional Chinese}
-\textzhtc{海客談瀛洲，煙濤微茫信難求。 越人語天姥，雲霞明滅或可覩。 天姥連天向天橫，勢拔五嶽掩赤城。}
-
-\paragraph{Japanese}
-海客瀛洲を談ず、煙濤微茫にして信に求め難しと。越人天姥を語る、雲霓明滅或は睹る可しと。天姥天に連なり天に向って橫たはる、勢は五嶽を拔き赤城を掩ふ。
-
-\paragraph{Korean}
-\textko{
-해객담영주 연도미망신난구 월인어천모 운예명멸혹가도 천모연천향천횡 세발오악엄적성}
 
 

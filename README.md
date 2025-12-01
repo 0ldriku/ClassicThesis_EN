@@ -1,19 +1,10 @@
 # ClassicThesis Template (Enhanced for Japanese/CJK Support)
 
-A modified version of the Classic Thesis Style template with enhanced support for Japanese and multilingual academic writing.
+A modified version of the Classic Thesis Style template with enhanced support for Japanese and multilingual academic writing. If your thesis mainly in Japanese, please use the [Japanese template](https://github.com/0ldriku/ClassicThesis_JA).
 
 ## About This Template
 
 This template is based on [ClassicThesis v4.8](https://ctan.org/pkg/classicthesis) by André Miede and Ivo Pletikosić, with customizations for academic research writing, particularly for Japanese and multilingual documents.
-
-### Key Features
-
-- **APA 7th Edition Citation Style**: Configured for proper academic citations
-- **Enhanced Japanese Support**: Optimized for XeLaTeX with CJK font support
-- **Japanese Name Formatting**: Custom delimiter (・) between multiple Japanese authors
-- **Japanese Reference Sorting**: Proper bibliographic ordering using the 50-on table
-- **Multi-language Support**: Built-in support for Japanese, Simplified Chinese, Traditional Chinese, and Korean
-
 
 ## ⚡ Quick Start (TL;DR)
 

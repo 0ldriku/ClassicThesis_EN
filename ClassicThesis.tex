@@ -60,45 +60,11 @@
 \usepackage{multicol}
 \usepackage{colortbl}       
 \usepackage{array}         
+\usepackage{CJKutf8}
 
 
 \definecolor{headerblue}{RGB}{52, 73, 94}
 \definecolor{lightgray}{RGB}{245, 245, 245}
-
-\ifPDFTeX
-  \usepackage{CJKutf8}
-  \usepackage{ipaex-type1}
-  \usepackage[whole]{bxcjkjatype}
-\else % Use this for XeLaTeX, especially for Japanese-heavy documents
-  \usepackage{xeCJK}
-\setCJKmainfont[
-    SmallCapsFont = Noto Sans CJK JP,  % Japanese in \section (SmallCaps) -> Gothic
-    ItalicFont = Noto Sans CJK JP      % Japanese in \subsection (Italic) -> Gothic
-]{Noto Serif CJK JP}
-  \setCJKsansfont{Noto Sans CJK JP}
-  \setCJKmonofont{Noto Sans Mono CJK JP}% Default fonts, can be customized
-  % 1. Define Simplified Chinese (SC)
-\newCJKfontfamily\schinesefont{Noto Serif CJK SC}[
-  Script=CJK,
-  Language=Chinese Simplified
-]
-
-% 2. Define Traditional Chinese (TC) - Optional if you need it
-\newCJKfontfamily\tchinesefont{Noto Serif CJK TC}[
-  Script=CJK,
-  Language=Chinese Traditional
-]
-
-% 3. Define Korean (KR)
-\newCJKfontfamily\koreanfont{Noto Serif CJK KR}[
-  Script=CJK,
-  Language=Korean
-]
-\fi
-
-\newcommand{\textzhtc}[1]{{\tchinesefont #1}} % for Traditional Chinese
-\newcommand{\textzh}[1]{{\schinesefont #1}} % for Simplified Chinese
-\newcommand{\textko}[1]{{\koreanfont #1}}   % for Korean
 
 
 %********************************************************************

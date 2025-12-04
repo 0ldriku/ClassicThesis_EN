@@ -2,16 +2,9 @@
 
 
 
-論文の組版において \LaTeX やWordと格闘しておられる方も多いのではないでしょうか。
 This template is designed to help my colleagues write their theses efficiently. It is based on the \texttt{classicthesis} package version 4.8 (\url{https://ctan.org/pkg/classicthesis?lang=en}), with several customizations tailored to our writing needs.
 
-Key modifications include:
-\begin{itemize}
-    \item APA 7th edition citation style
-    \item Custom formatting for Japanese author names (using "・" delimiter between multiple authors)
-    \item Enhanced sorting capabilities for Japanese references
-    \item Improved multi-language support
-\end{itemize}
+
 
 This chapter provides an overview of the template's features and basic usage instructions. \autoref{ch:examples} demonstrates various \LaTeX features with practical examples, while \autoref{ch:settings} offers detailed explanations of template configuration options.
 
@@ -36,7 +29,7 @@ That's it! For detailed explanations, continue reading below.
 
 
 \vspace{1cm}
-\textbf{日本語論文の場合、下記テンプレートを使用してください。}
+\textbf{If your thesis are mainly in Japanese, use below.}
 
 \begin{center}
     \url{https://github.com/0ldriku/ClassicThesis_JA}
@@ -69,7 +62,6 @@ For more information about Japanese support in \LaTeX, see \url{https://www.over
 
 \section{Citation Style}
 
-\subsection{English References}
 
 Build your bibliography entries following the standard BibTeX format. Below are examples of common entry types: 
 
@@ -122,54 +114,4 @@ Build your bibliography entries following the standard BibTeX format. Below are 
     isbn = {978-1-4467-9236-0}
 }
 \end{lstlisting}
-
-
-\subsection{Japanese References}
-
-
-\begin{lstlisting}
-@article{tanaka2025,
-  title        = {ダミーとミダーの関連性についての検討},
-  author       = {田中, 太郎 and 山田, 花子},
-  journal      = {日本科学会誌},
-  volume       = {10},
-  number       = {1},
-  pages        = {10-25},
-  year         = {2025},
-  doi          = {10.1000/dummy.doi.123},
-  langid       = {japanese},
-  yomi         = {tanaka, taro and yamada, hanako}
-}
-
-@book{suzuki2024,
-  title        = {バナナの基礎と応用},
-  author       = {鈴木, 一郎},
-  publisher    = {東工大出版会},
-  address      = {東京},
-  year         = {2024},
-  langid       = {japanese},
-  yomi         = {suzuki, ichiro}
-}
-
-@inproceedings{sato2023,
-  title        = {東工大パワー丼における水菜と豚肉の配分},
-  author       = {加藤, 次郎},
-  booktitle    = {東工大学食学会第50回全国大会講演論文集},
-  pages        = {100-102},
-  year         = {2023},
-  month        = aug,
-  langid       = {japanese},
-  yomi         = {kato, jiro}
-}
-\end{lstlisting}
-
-The format of the \texttt{yomi} field determines the sorting order of the bibliography:
-
-\begin{description}
-    \item[Hiragana:] Japanese references are listed separately after English references and sorted according to the 50-on table.
-    \item[Romaji:] Japanese references are mixed with English references and sorted alphabetically.
-\end{description}
-
-
-\textit{Note:} Chinese references can also use \texttt{langid=japanese}, though they will be rendered in Japanese fonts in the bibliography. This is acceptable IMHO.
 
